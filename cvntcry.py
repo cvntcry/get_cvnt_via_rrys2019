@@ -105,7 +105,7 @@ class CvntCry:
             newHash,newCookies = self.getNewSession()
       with open("history.txt","a",encoding="utf-8") as f:
         f.write(telhead + "\n")
-      print("tried 1000 tels...")
+      print("tried 10000 tels...")
     print("**end program**")
 
   def run(self):
