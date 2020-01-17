@@ -144,7 +144,7 @@ class DigCvnt:
         html = json.loads(html)
         info = html["info"]
         if info == "手机号未注册，请先注册":
-          print("tel wrong, delete and continue...")
+          print("tel wrong, skip and continue...")
           self.resetLogInCount(tel)
           break
         elif info == "登陆成功":
