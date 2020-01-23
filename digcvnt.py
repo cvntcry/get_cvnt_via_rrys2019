@@ -89,37 +89,6 @@ class DigCvnt:
     newHash = html.xpath("//input[@name='__hash__']/@value")[0]
     return newHash,newCookies
 
-  def resetLogInCount(self,tel):
-    print("reset log in count...")
-    newHash,newCookies = self.getNewSession()
-    post_data = {"area":"86","mobile":"13982649378","password":"2020CvntCry","__hash__":newHash}
-    while True:
-      try:
-        response = requests.post(self.post_url,headers=self.post_headers,data=post_data,cookies=newCookies)
-      except Exception as e:
-        print("reset log in count err, try again...")
-        time.sleep(2)
-        continue
-      if response.status_code == 200:
-        break
-      else:
-        print("502...")
-        time.sleep(2)
-        continue
-    html = response.content.decode()
-    html = json.loads(html)
-    info = html["info"]
-    if info == "此IP已达到8次登录错误，已被封禁，请3小时后重试！":
-      with open("diglog.txt","a",encoding="utf-8") as f:
-        f.write(tel + " BLOCK IP" + "\n")
-      print("BLOCK IP")
-      print("**quit program**")
-      sys.exit()
-    elif info != "登陆成功":
-      print("reset log in count function err, replace a valid tel and correct password instead of 13982649378 and 2020CvntCry...")
-      print("**quit program**")
-      sys.exit()
-
   def digTarget(self):
     time.sleep(2)
     for tel in self.telList:
@@ -145,18 +114,17 @@ class DigCvnt:
         info = html["info"]
         if info == "手机号未注册，请先注册":
           print("tel wrong, skip and continue...")
-          self.resetLogInCount(tel)
           break
         elif info == "登陆成功":
           with open("mine.txt","a",encoding="utf-8") as f:
             f.write(tel + "  :  " + ammo + "\n")
           print("dig out one cvnt mine...")
+          self.logInCount = 0
           break
         else:
           self.logInCount += 1
-          if self.logInCount == 7:
-            print("log wrong 7 times...")
-            self.resetLogInCount(tel)
+          if self.logInCount == 100:
+            print("log in wrong 100 times...")
             self.logInCount = 0
     print("**end program**")
 
