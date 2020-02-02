@@ -10,7 +10,7 @@ import time
 
 class OpenZmz:
   def __init__(self):
-    self.post_url = "http://www.zmz2019.com/User/Login/ajaxLogin"
+    self.post_url = "http://www.rrys2019.com/User/Login/ajaxLogin"
     self.post_headers = {
       "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.61",
       "Accept":"application/json, text/javascript, */*; q=0.01"
