@@ -10,19 +10,19 @@ import time
 
 class CvntCry:
   def __init__(self):
-    self.url = "http://www.zmz2019.com/user/login"
+    self.url = "http://www.rrys2019.com/user/login"
     self.headers = {
       "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.61",
       "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
     }
-    self.post_url = "http://www.zmz2019.com/user/login/mobile_login"
+    self.post_url = "http://www.rrys2019.com/user/login/mobile_login"
     self.post_headers = {
       "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.61",
       "Accept":"application/json, text/javascript, */*; q=0.01",
       "Content-Type":"application/x-www-form-urlencoded",
       "Host":"www.zmz2019.com",
-      "Origin":"http://www.zmz2019.com",
-      "Referer":"http://www.zmz2019.com/user/login"
+      "Origin":"http://www.rrys2019.com",
+      "Referer":"http://www.rrys2019.com/user/login"
     }
     self.telHeadList = []
     self.telTailSet = set()
