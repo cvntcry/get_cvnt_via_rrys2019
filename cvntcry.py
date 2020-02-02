@@ -20,7 +20,7 @@ class CvntCry:
       "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.61",
       "Accept":"application/json, text/javascript, */*; q=0.01",
       "Content-Type":"application/x-www-form-urlencoded",
-      "Host":"www.zmz2019.com",
+      "Host":"www.rrys2019.com",
       "Origin":"http://www.rrys2019.com",
       "Referer":"http://www.rrys2019.com/user/login"
     }
